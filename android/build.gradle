@@ -23,7 +23,11 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 31
-
+    
+    if (project.android.hasProperty("namespace")) {
+        namespace 'in.lazymanstudios.uri_to_file'
+    }
+    
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
